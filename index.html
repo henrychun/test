@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+        /* ===============gobal setting=============*/
+
+        * {
+            font-family: "Montserrat";
+            box-sizing: border-box;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            color: #888888;
+            font-size: 13px;
+            padding: 15px;
+        }
+
+        /*==========================Layout==========================*/
+
+        .full-width {
+            width: 100%;
+        }
+
+        .fixed-width {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .col-1 {
+            width: 100%;
+            padding: 15px;
+        }
+
+        .col-2 {
+            width: 50%;
+        }
+
+        .col-3 {
+            width: calc(100% / 3);
+        }
+
+        .col-4 {
+            width: 25%;
+        }
+
+        .col-5 {
+            width: 20%;
+        }
+
+        .col-6 {
+            width: calc(100% / 6);
+        }
+
+        
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6 {
+            float: left;
+            padding: 15px;
+        }
+
+        /*=====================nav==============================        */
+
+        nav {
+            background-color: #c6c6c6;
+            position: fixed;
+            z-index: 999;
+        }
+
+        nav .col-1 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        nav .logo {
+            float: left;
+        }
+
+        nav .menu {
+            float: right;
+        }
+
+        nav .menu li {
+            float: left;
+            list-style: none;
+        }
+
+        nav .menu a {
+            text-decoration: none;
+            display: block;
+            color: #000;
+            margin-left: 30px;
+            font-size: 14px;
+            transition: all .4s;
+        }
+
+        nav .menu a:hover {
+            color: #9d9d9d;
+            font-size: 1em;
+        }
+
+        /*==================header========================*/
+
+        header {
+            background-image: url(banner.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 300px;
+            padding-bottom: 300px;
+            height: 800px;
+            color: white;
+            text-align: center;
+            /*display: table;*/
+        }
+
+        /*
+        header .fixed-width {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        */
+
+        header p {
+            color: white;
+            font-size: 1em;
+        }
+
+        header h1 {
+            font-size: 4em;
+        }
+
+        /*============slogan==============*/
+
+        #slogan {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        #slogan h2 {
+            margin-bottom: 15px;
+        }
+
+        #slogan .fixed-width {
+            width: 760px;
+            text-align: center;
+        }
+
+        /*=========works===========*/
+
+        #works {
+            background-image: url(banner.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        /*===========service==========*/
+
+        #services {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        #services .fixed-width:nth-of-type(1) {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        #services h2 {
+            margin-bottom: 15px;
+        }
+
+        #services h3 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        #services .col-3 {
+            height: 300px;
+        }
+
+        /*===================banner==============*/
+
+        #banner {
+            padding-top: 150px;
+            padding-bottom: 150px;
+            text-align: center;
+            background-color: #484646;
+        }
+
+        /*============about==============*/
+
+        #about {
+            padding-top: 150px;
+            padding-bottom: 150px;
+            text-align: center;
+        }
+
+        #about {
+            margin-bottom: 30px;
+        }
+
+        #about .fixed-width:nth-of-type(1) {
+            margin-bottom: 50px;
+        }
+
+        #about .pic {
+            z-index: 0;
+            height: 370px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 15px orange solid;
+            border-radius: 50%;
+            transform: scale(.8);
+        }
+
+        /*============purchaes=============*/
+
+        #purchase {
+            padding-top: 150px;
+            padding-bottom: 150px;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        #purchase h2 {
+            margin-bottom: 30px;
+        }
+
+
+        #purchase a {
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 10px 30px;
+        }
+
+        /*============blog=============*/
+
+        #blog {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        #blog h2 {
+            margin-bottom: 30px;
+        }
+
+        #blog .fixed-width:nth-of-type(1) {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        #blog .gallery {
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        #blog .gallery .img {
+            position: absolute;
+        }
+
+        #blog .gallery .date {
+            position: absolute;
+            width: 50px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            /*            height: 50px;*/
+            background-color: black;
+            top: 0;
+            left: 0;
+            text-align: center;
+            color: white;
+        }
+
+        #blog .col-4 p {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #blog .col-4 a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /*        ==============sponsor=================*/
+
+        #sponsor {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        /*        ======================contact========================*/
+
+        #contact {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        #contact h2 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #contact p{
+            text-align: center;
+        }
+
+/*
+        #contact .fixed-width:nth-of-type(1): {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+*/
+
+        #contact h3 {
+            padding: 15px;
+        }
+
+        #contact .info {
+            float: left;
+            width: 400px;
+            padding: 15px;
+            font-size: 13px;
+            color: #888888;
+        }
+
+        #contact .info-item {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        #contact .info-icon {
+            float: left;
+            width: 30px;
+        }
+
+        #contact .info-content {
+            float: left;
+            width: 340px;
+        }
+
+        #contact .info-content ul {
+            list-style: none;
+        }
+
+        #contact .form {
+            width: 800px;
+            float: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px 5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 15px 10px;
+        }
+        .form .btn{
+            display: inline-block;
+            margin-left: 15px;
+            color: white;
+            background-color: #179a6e;            
+            padding:15px 30px;
+        }
+/*        =============footer=================*/
+        footer{
+            background-color: black;
+            color: white;
+            padding-top: 150px;
+            text-align: center;
+        }
+        
+        footer h2{
+            margin-bottom: 50px;
+            font-weight: normal;
+            letter-spacing: 6px;
+        }
+        
+        footer .sns{
+            margin-bottom: 100px;
+        }
+        
+        footer .sns a{
+            color:white;
+            text-decoration: none;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        footer .copy{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            color: azure;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <nav class="full-width">
+        <div class="col-1 clearfix">
+            <div class="logo">AFELA</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">ALL DEMONS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="full-width">
+        <div class="fixed-width">
+            <h1>AMAZING DESIGN</h1>
+            <p>Flexible and Creative. Meet the New Style</p>
+        </div>
+    </header>
+    <div id="slogan" class="full-width">
+        <div class="fixed-width">
+            <h2>WE ARE FAMILY<br>COME AND JOIN US</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam totam, velit, veritatis vitae deserunt optio quisquam porro maiores, quos aspernatur, quidem nisi distinctio perferendis. Corporis optio hic quasi, eveniet dolorum!</p>
+        </div>
+    </div>
+
+    <div id="works" class="full-width"></div>
+
+
+    <div id="services" class="full-width">
+        <div class="fixed-width">
+            <h2>BEST SERVICES</h2>
+            <p>We help our clients market to the world and inspire minds of people</p>
+        </div>
+        <div class="fixed-width clearfix">
+            <div class="col-3">
+                <span class="fa fa-camera-retro fa-3x"></span>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi assumenda, pariatur ducimus accusantium voluptatem placeat vitae! Nesciunt eaque nam architecto mollitia iure tenetur, consequatur possimus, perferendis consequuntur alias nemo.</p>
+            </div>
+            <div class="col-3">
+                <span class="fa fa-flask fa-3x"></span>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi assumenda, pariatur ducimus accusantium voluptatem placeat vitae! Nesciunt eaque nam architecto mollitia iure tenetur, consequatur possimus, perferendis consequuntur alias nemo.</p>
+            </div>
+            <div class="col-3">
+                <span class="fa fa-hourglass fa-3x"></span>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi assumenda, pariatur ducimus accusantium voluptatem placeat vitae! Nesciunt eaque nam architecto mollitia iure tenetur, consequatur possimus, perferendis consequuntur alias nemo.</p>
+            </div>
+            <div class="col-3">
+                <span class="fa fa-heart fa-3x"></span>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi assumenda, pariatur ducimus accusantium voluptatem placeat vitae! Nesciunt eaque nam architecto mollitia iure tenetur, consequatur possimus, perferendis consequuntur alias nemo.</p>
+            </div>
+            <div class="col-3">
+                <span class="fa fa-bolt fa-3x"></span>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi assumenda, pariatur ducimus accusantium voluptatem placeat vitae! Nesciunt eaque nam architecto mollitia iure tenetur, consequatur possimus, perferendis consequuntur alias nemo.</p>
+            </div>
+            <div class="col-3">
+                <span class="fa fa-cloud fa-3x"></span>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quasi assumenda, pariatur ducimus accusantium voluptatem placeat vitae! Nesciunt eaque nam architecto mollitia iure tenetur, consequatur possimus, perferendis consequuntur alias nemo.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="banner" class="full-width">
+        <div class="fixed-width">
+            <h2>TITLE</h2>
+            <p>What are you waiting for?</p>
+        </div>
+    </div>
+
+
+    <div id="about" class="full-width">
+        <div class="fixed-width">
+            <h2>ABOUT US</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque repellat in fugit accusantium sint velit, explicabo vero quam debitis ab placeat sequi odio alias ipsa fugiat aliquam laudantium, veritatis! Itaque?</p>
+        </div>
+        <div class="fixed-width clearfix">
+            <div class="col-3">
+                <div class="pic"><img src="image02.jpeg" alt=""></div>
+                <h3>WORD</h3>
+                <p>text</p>
+            </div>
+            <div class="col-3">
+                <div class="pic"><img src="image03.jpeg" alt=""></div>
+                <h3>WORD</h3>
+                <p>text</p>
+            </div>
+            <div class="col-3">
+                <div class="pic"><img src="image04.jpeg" alt=""></div>
+                <h3>WORD</h3>
+                <p>text</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="purchase" class="full-width">
+        <div class="fixed-width">
+            <h2>ARE YOU READY TO SLEEP??</h2>
+            <a href="#">SLEEP NOW</a>
+        </div>
+    </div>
+    <div id="blog" class="full-width">
+        <div class="fixed-width">
+            <h2>LATEST NEWS</h2>
+            <p>comming soon!!!</p>
+        </div>
+        <div class="fixed-width clearfix">
+            <div class="col-4">
+                <div class="gallery">
+                    <img src="image05.jpeg" alt="">
+                    <div class="date">
+                        <div class="day">13</div>
+                        <div class="month">Mar</div>
+                    </div>
+                    <h3>Sence1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus at, labore repellat aliquam quis harum vel ipsum iusto, ab ad maiores a deserunt adipisci consequuntur! Molestias suscipit illo voluptate ea.</p>
+                    <a href="#">read me >></a>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="gallery">
+                    <img src="image06.jpeg" alt="">
+                    <div class="date">
+                        <div class="day">13</div>
+                        <div class="month">Mar</div>
+                    </div>
+                    <h3>Sence1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus at, labore repellat aliquam quis harum vel ipsum iusto, ab ad maiores a deserunt adipisci consequuntur! Molestias suscipit illo voluptate ea.</p>
+                    <a href="#">read me >></a>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="gallery">
+                    <img src="image07.jpeg" alt="">
+                    <div class="date">
+                        <div class="day">13</div>
+                        <div class="month">Mar</div>
+                    </div>
+                    <h3>Sence1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus at, labore repellat aliquam quis harum vel ipsum iusto, ab ad maiores a deserunt adipisci consequuntur! Molestias suscipit illo voluptate ea.</p>
+                    <a href="#">read me >></a>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="gallery">
+                    <img src="image08.jpeg" alt="">
+                    <div class="date">
+                        <div class="day">13</div>
+                        <div class="month">Mar</div>
+                    </div>
+                    <h3>Sence1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus at, labore repellat aliquam quis harum vel ipsum iusto, ab ad maiores a deserunt adipisci consequuntur! Molestias suscipit illo voluptate ea.</p>
+                    <a href="#">read me >></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full-width" id="sponsor">
+        <div class="fixed-width clearfix">
+            <div class="col-6">
+                <span class="fa fa-facebook-square fa-3x"></span>
+            </div>
+            <div class="col-6">
+                <span class="fa fa-apple fa-3x"></span>
+            </div>
+            <div class="col-6">
+                <span class="fa fa-reddit fa-3x"></span>
+            </div>
+            <div class="col-6">
+                <span class="fa fa-tripadvisor fa-3x"></span>
+            </div>
+            <div class="col-6">
+                <span class="fa fa-twitter-square fa-3x"></span>
+            </div>
+            <div class="col-6">
+                <span class="fa fa-steam-square fa-3x"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div class="full-width" id="contact">
+        <div class="fixed-width">
+            <h2>Contact</h2>
+            <p>your happiness is our wish.</p>
+        </div>
+        <div class="fixed-width clearfix">
+            <h3>INFORMATION</h3>
+            <div class="info">
+                <div class="info-item clearfix">
+                    <div class="info-icon"><span class="fa fa-home"></span></div>
+                    <div class="info-content">
+                        <ul>
+                            <li>Colifornia</li>
+                            <li>Afela inc</li>
+                            <li>48792</li>
+                            <li>Star apple st.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-item clearfix">
+                    <div class="info-icon"><span class="fa fa-phone"></span></div>
+                    <div class="info-content">
+                        (800)123-456-789
+                    </div>
+                </div>
+                <div class="info-item clearfix">
+                    <div class="info-icon"><span class="fa fa-envelope-open"></span></div>
+                    <div class="info-content">qwer@gmail.com</div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="col-2">
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="col-2">
+                    <input type="text" placeholder="Mail">
+                </div>
+                <div class="col-1">
+                    <textarea name="" id="" placeholder="Message"></textarea>
+                </div>
+                <div>
+                    <button class="btn">SEND MESSAGE</button>
+                </div>
+                
+            </div>
+        </div>        
+    </div>
+<!--    footer-->
+   <footer class="full-width">
+       <div class="fixed-width">
+           <h2>AFELLA</h2>
+           <div class="sns">
+               <a href="#" class="fa fa-facebook"></a>
+               <a href="#" class="fa fa-twitter"></a>
+               <a href="#" class="fa fa-google"></a>
+               <a href="#" class="fa fa-instagram"></a>
+               <a href="#" class="fa fa-github"></a>
+               <a href="#" class="fa fa-pinterest"></a>
+           </div>
+           <div class="copy">&copy;2017 AFELLA|design by HenryLee</div>
+       </div>
+   </footer>
+    
+    
+</body>
+
+</html>
