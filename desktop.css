@@ -1,0 +1,410 @@
+@media screen and (min-width:1200px){
+    /*==========================Layout==========================*/
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-width {
+    width: 1200px;
+    margin: auto;
+}
+
+.col-1 {
+    width: 100%;
+    padding: 15px;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: calc(100% / 3);
+}
+
+.col-4 {
+    width: 25%;
+}
+
+.col-5 {
+    width: 20%;
+}
+
+.col-6 {
+    width: calc(100% / 6);
+}
+
+
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6 {
+    float: left;
+    padding: 15px;
+}
+
+/*=====================nav==============================        */
+
+nav {
+    background-color: #c6c6c6;
+    position: fixed;
+    z-index: 999;
+}
+
+nav .col-1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+nav .logo {
+    float: left;
+}
+
+nav .menu {
+    float: right;
+}
+
+nav .menu li {
+    float: left;
+    list-style: none;
+}
+
+nav .menu a {
+    text-decoration: none;
+    display: block;
+    color: #000;
+    margin-left: 30px;
+    font-size: 14px;
+    transition: all .4s;
+}
+
+nav .menu a:hover {
+    color: #9d9d9d;
+    font-size: 1em;
+}
+
+/*==================header========================*/
+
+header {
+    background-image: url(banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    height: 800px;
+    color: white;
+    text-align: center;
+    /*display: table;*/
+}
+
+/*
+        header .fixed-width {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        */
+
+header p {
+    color: white;
+    font-size: 1em;
+}
+
+header h1 {
+    font-size: 4em;
+}
+
+/*============slogan==============*/
+
+#slogan {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#slogan h2 {
+    margin-bottom: 15px;
+}
+
+#slogan .fixed-width {
+    width: 760px;
+    text-align: center;
+}
+
+/*=========works===========*/
+
+#works {
+    background-image: url(banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/*===========service==========*/
+
+#services {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#services .fixed-width:nth-of-type(1) {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#services h2 {
+    margin-bottom: 15px;
+}
+
+#services h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#services .col-3 {
+    height: 300px;
+}
+
+/*===================banner==============*/
+
+#banner {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+    background-color: #484646;
+}
+
+/*============about==============*/
+
+#about {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+#about {
+    margin-bottom: 30px;
+}
+
+#about .fixed-width:nth-of-type(1) {
+    margin-bottom: 50px;
+}
+
+#about .pic {
+    z-index: 0;
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 15px orange solid;
+    border-radius: 50%;
+    transform: scale(.8);
+}
+
+#about .pic img {
+    height: 400px;
+    width: 400px;
+}
+
+/*============purchaes=============*/
+
+#purchase {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+#purchase h2 {
+    margin-bottom: 30px;
+}
+
+
+#purchase a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 30px;
+}
+
+/*============blog=============*/
+
+#blog {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#blog h2 {
+    margin-bottom: 30px;
+}
+
+#blog .fixed-width:nth-of-type(1) {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#blog .gallery {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#blog .gallery .img {
+    position: absolute;
+}
+
+#blog .gallery .date {
+    position: absolute;
+    width: 50px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    /*            height: 50px;*/
+    background-color: black;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+}
+
+#blog .col-4 p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#blog .col-4 a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*        ==============sponsor=================*/
+
+#sponsor {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/*        ======================contact========================*/
+
+#contact {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#contact h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#contact p {
+    text-align: center;
+}
+
+/*
+        #contact .fixed-width:nth-of-type(1): {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+*/
+
+#contact h3 {
+    padding: 15px;
+}
+
+#contact .info {
+    float: left;
+    width: 400px;
+    padding: 15px;
+    font-size: 13px;
+    color: #888888;
+}
+
+#contact .info-item {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#contact .info-icon {
+    font-size: 2em;
+    float: left;
+    width: 30px;
+}
+
+#contact .info-content {
+    float: left;
+    width: 340px;
+    font-size: 18px;
+}
+
+#contact .info-content ul {
+    list-style: none;
+}
+
+#contact .form {
+    width: 800px;
+    float: left;
+}
+
+input {
+    width: 100%;
+    padding: 15px 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 15px 10px;
+}
+
+.form .btn {
+    display: inline-block;
+    margin-left: 15px;
+    color: white;
+    background-color: #179a6e;
+    padding: 15px 30px;
+    border: none;
+}
+
+/*        =============footer=================*/
+
+footer {
+    background-color: black;
+    color: white;
+    padding-top: 150px;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 50px;
+    font-weight: normal;
+    letter-spacing: 6px;
+}
+
+footer .sns {
+    margin-bottom: 100px;
+}
+
+footer .sns a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 4em;
+}
+
+footer .copy {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: azure;
+    font-size: 13px;
+}
+
+}

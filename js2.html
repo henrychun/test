@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Get Element</title>
+    
+</head>
+
+<body>
+    <div id="www"></div>
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div id="space"></div>
+    <script>
+        var o = document.getElementById("www");        
+        o.textContent="Hi";
+        document.getElementById("www").textContent="Hello";
+        console.log(o);
+        var b =document.getElementsByClassName("box")[1];
+        console.log(b);
+        var s = document.getElementById("space");
+        s.innerHTML= "<h1>IMAGINE</h1>" 
+        s.style.color="red";
+        var bgc=document.getElementsByTagName("div");
+        console.log(bgc);
+        bgc[1].style.backgroundColor="#9b9";
+        console.log(bgc[1]);
+        bgc[3].style.color="pink";
+        //如果抓類別(Class)或標籤(Tag)要指定第幾個[index]不然會出現錯誤
+        
+
+    </script>
+</body>
+
+</html>

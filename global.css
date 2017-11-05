@@ -1,0 +1,48 @@
+/* ===============gobal setting=============*/
+* {
+    font-family: "Montserrat";
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    color: #888888;
+    font-size: 13px;
+    padding: 15px;
+}
+
+input,textarea{
+    background-color: #d0d6db;
+    border:0px;
+}
+
+input:focus,textarea:focus{
+    outline:0;
+    border:2px dotted aqua;
+    background-color: white;
+    transition:all .5s;
+}
